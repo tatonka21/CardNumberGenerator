@@ -1,5 +1,6 @@
 package com.generator;
 
+import java.security.SecureRandom;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class CardGenerator {
     }
 
     public void printValidCards(List<String> cardNumbers) {
-        Random r = new Random();
+        Random r = new SecureRandom();
         for (int i = 0; i < 10; i++) {
             int k = r.nextInt(1000) + 1;
             System.out.print(cardNumbers.get(k) + ",");
